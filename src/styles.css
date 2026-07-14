@@ -68,7 +68,91 @@ img {
 .page-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 40px 0 64px;
+  padding: 22px 0 64px;
+}
+
+.top-nav {
+  position: sticky;
+  top: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(7, 17, 31, 0.7);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.top-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.top-nav__brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #03131f;
+  background: linear-gradient(135deg, var(--accent) 0%, #8cf6d9 100%);
+  font-weight: 800;
+}
+
+.top-nav__brand-text {
+  display: grid;
+  min-width: 0;
+}
+
+.top-nav__brand-text strong {
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+}
+
+.top-nav__brand-text small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.top-nav__links {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+}
+
+.top-nav__links a,
+.top-nav__cta {
+  transition: color 160ms ease, transform 160ms ease, border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.top-nav__links a:hover {
+  color: var(--text);
+}
+
+.top-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.top-nav__cta:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .hero {
@@ -377,6 +461,19 @@ img {
 }
 
 @media (max-width: 920px) {
+  .top-nav {
+    flex-wrap: wrap;
+    border-radius: 28px;
+  }
+
+  .top-nav__links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 6px;
+  }
+
   .hero,
   .feature-grid,
   .metrics,
@@ -403,6 +500,23 @@ img {
   .page-shell {
     width: min(100% - 20px, 1180px);
     padding: 20px 0 40px;
+  }
+
+  .top-nav {
+    padding: 14px;
+  }
+
+  .top-nav__brand-text small {
+    display: none;
+  }
+
+  .top-nav__links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .top-nav__cta {
+    width: 100%;
   }
 
   .hero__panel,

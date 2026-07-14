@@ -1,3 +1,5 @@
+import TopNav from './components/TopNav';
+
 const features = [
   {
     title: 'One command launch',
@@ -30,7 +32,9 @@ const proof = [
 
 export default function App() {
   return (
-    <main class="page-shell">
+    <main class="page-shell" id="top">
+      <TopNav />
+
       <section class="hero">
         <div class="hero__copy">
           <p class="eyebrow">Asterline OS</p>
@@ -101,7 +105,7 @@ export default function App() {
         </div>
       </section>
 
-      <section class="quote-band">
+      <section class="quote-band" id="proof">
         <p>
           “The layout feels like a real product launch rather than a generic
           template. It is crisp, focused, and easy to adapt.”
