@@ -1,4 +1,5 @@
 import TopNav from './components/TopNav';
+import Footer from './components/Footer';
 
 const features = [
   {
@@ -126,6 +127,8 @@ export default function App() {
           Start the conversation
         </a>
       </section>
+
+      <Footer />
     </main>
   );
 }

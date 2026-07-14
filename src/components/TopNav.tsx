@@ -8,7 +8,7 @@ export default function TopNav() {
   return (
     <nav class="top-nav" aria-label="Primary">
       <a class="top-nav__brand" href="#top" aria-label="Asterline OS home">
-        <span class="top-nav__brand-mark">A</span>
+        <span class="brand-mark">A</span>
         <span class="top-nav__brand-text">
           <strong>Asterline OS</strong>
           <small>Demo SaaS launchpad</small>
